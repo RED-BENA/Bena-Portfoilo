@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="js/swipe.js"></script>
+  <script src="js/jquery.mousewheel.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+  <title>JARDIN DE BENA</title>
+</head>
+
+<body>
+
+  <!-- 네비게이션 바와 모든 페이지(Careers, Works, Profile, Contact) 를 포함하는 컨테이너 -->
+
+  <div class="base">
+
+    <!-- 헤더 -->
+
+    <div class="header">
+
+      <!-- 메뉴 열기/닫기 버튼 -->
+
+      <div class="menu-toggle js-menu-toggle">
+        <div class="menu-toggle__bar1"></div>
+        <div class="menu-toggle__bar2"></div>
+        <div class="menu-toggle__bar3"></div>
+      </div>
+
+      <!-- 네비게이션 바 -->
+
+      <div class="nav js-nav">
+        <ul class="nav__list">
+          <li class="nav__item js-nav__item">
+            <a href="#" data-enhance="false">MAIN</a>
+          </li>
+
+          <li class="nav__item js-nav__item">
+            <a href="#">CAREERS</a>
+          </li>
+
+          <li class="nav__item js-nav__item">
+            <a href="#">WORKS</a>
+          </li>
+
+          <li class="nav__item js-nav__item">
+            <a href="#">PROFILE</a>
+          </li>
+
+          <li class="nav__item js-nav__item">
+            <a href="#">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 진짜 페이지(맨앞)와 가짜 페이지(뒤에 두 개) -->
+
+    <div class="all-pages">
+
+      <!-- 진짜 페이지를 보여주는 page__container(overflow-y를 hidden으로 하여 한 섹션만 볼 수 있게 함) -->
+
+      <div class="page__container js-page__container active">
+
+        <!-- 진짜 페이지의 translate를 적용하는 부분(0, -100%, -200%)-->
+
+        <div class="page__container--front js-page__container--front active">
+
+          <!-- 진짜 페이지 -->
+
+          <div class="page__item page__item--front js-page__item--front">
+
+            <!-- 배너 -->
+
+            <div class="banner js-banner">
+              <div class="banner__box">
+                <div class="banner__title">
+                  <h1 class="banner__title-text">JARDIN DE BENA</h1>
+                  <p class="banner__subtitle-text">Luxury, Classic, Unique</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 개요 -->
+
+            <div class="summary js-summary">
+              <div class="wrapper">
+                <h2 class="summary__title">JARDIN DE BENA</h2>
+
+                <span class="rose-icon"></span>
+
+                <div class="summary__content">
+                  JARDIN DE BENA는 저의 작품을 소개하는 웹사이트입니다. JARDIN DE BENA는 프랑스어로 JARDIN은 정원,
+                  BENA는 저의 닉네임으로 '베나의 정원'이라는 뜻이며, 제목 그대로 정원의 꽃처럼 아름답고 고급스러운
+                  작품들을 만나보실 수 있습니다.
+
+                  <div class="summary__paragraph"></div>
+
+                  여기 JARDIN DE BENA 역시 저의 작품입니다. 이 웹사이트가 여러분에게 좋은 기억으로
+                  남기를 바랍니다. 가장 먼저 좌측 상단 버튼을 눌러 작품 감상을 시작하세요:)
+
+                  <div class="summary__paragraph"></div>
+
+                  <p class="summary__end">
+                     Written by.베나
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 테마컬러 -->
+
+            <div class="theme-colors js-theme-colors">
+              <div class="wrapper">
+                <h2 class="theme-colors__title">THEME COLOR</h2>
+                <!-- <span class="rose-icon"></span> -->
+                <p class="theme-colors__subtitle">
+                  JARDIN DE BENA를 대표하는 세 가지 색
+                </p>
+
+                <div class="theme-colors__content">
+                  <ul class="theme-colors__list">
+                    <li class="theme-colors__item js-theme-colors__item">
+                      <div class="theme-colors__item-header">
+                        <a href="#">ROYAL BLUE</a>
+                        <span class="theme-colors__detail js-theme-colors__detail"></span>
+                      </div>
+                    </li>
+
+                    <li class="theme-colors__item js-theme-colors__item">
+                      <div class="theme-colors__item-header">
+                        <a href="#">CE SOIR</a>
+                        <span class="theme-colors__detail js-theme-colors__detail"></span>
+                      </div>
+                    </li>
+
+                    <li class="theme-colors__item js-theme-colors__item">
+                      <div class="theme-colors__item-header">
+                        <a href="#">EMINENCE</a>
+                        <span class="theme-colors__detail js-theme-colors__detail"></span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <span class="page__scroll-icon"></span>
+        </div>
+      </div>
+
+      <ul class="page__container--fake">
+        <li class="page__item page__item--fake js-page__item--fake"></li>
+        <li class="page__item page__item--fake js-page__item--fake"></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

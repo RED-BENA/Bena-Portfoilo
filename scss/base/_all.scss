@@ -1,0 +1,58 @@
+html {
+  position: relative;
+  z-index: -9999;
+}
+
+body {
+  font-family: 'Nanum Myeongjo', serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.ui-loader {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  @include laptop {
+    max-width: 1080px;
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.rose-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/rose-icon.png);
+  background-size: cover;
+}

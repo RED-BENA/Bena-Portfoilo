@@ -1,0 +1,55 @@
+.header {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/index-blur.jpg);
+  position: relative;
+}
+
+// 메뉴 버튼
+
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    cursor: pointer;
+
+    &__bar1,
+    &__bar2,
+    &__bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #fff;
+        margin: 6px 0;
+        transform-origin: 50% 20%;
+        transition: transform 0.4s, background-color 0.4s ease 0.4s; // X 모양으로 바뀌는 것과 버튼의 색이 변경되는 것을 따로 설정함
+    }
+
+    // 메뉴 버튼이 검은색으로 변했을 때
+
+    &.black {
+      .menu-toggle__bar1,
+      .menu-toggle__bar2,
+      .menu-toggle__bar3 {
+          background-color: #000;
+      }
+    }
+}
+
+// 메뉴 버튼이 X로 변했을 때
+
+.menu-toggle.change {
+  .menu-toggle {
+    &__bar1 {
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    &__bar2 {
+      opacity: 0;
+    }
+
+    &__bar3 {
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+  }
+}
