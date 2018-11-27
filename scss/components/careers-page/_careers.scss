@@ -1,0 +1,207 @@
+.careers {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/index.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+  touch-action: none;
+
+  &__half {
+    width: 100%;
+    height: 55%;
+    background-color: #fafafa;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__container {
+    width: 910px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__list {
+    width: 100%;
+    height: 425px;
+    margin-left: 0px;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 1;
+    transition: margin-left .3s ease .1s;
+  }
+
+  &__item {
+    width: 280px;
+    height: 100%;
+    margin-right: 25px;
+    float: left;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__item dt {
+    width: 100%;
+    height: 185px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+  }
+
+  &__item:first-child dt {
+    background-color: #5363D4;
+  }
+
+  &__item:nth-child(2) dt {
+    background-color: #601E81;
+  }
+
+  &__item:nth-child(3) dt {
+    background-color: #BFC3F3;
+  }
+
+  &__flower-icon {
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-image: url(../images/career-icon1.png);
+    background-size: cover;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    z-index: 1;
+    transition: transform .3s;
+  }
+
+  &__item:first-child &__flower-icon {
+    background-image: url(../images/career-icon1.png);
+  }
+
+  &__item:nth-child(2) &__flower-icon {
+    background-image: url(../images/career-icon2.png);
+  }
+
+  &__item:nth-child(3) &__flower-icon {
+    background-image: url(../images/career-icon3.png);
+  }
+
+  &__item:hover &__flower-icon {
+    transform: translateX(-50%) translateY(-10px);
+  }
+
+  &__item dd {
+    width: 100%;
+    height: 240px;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 35px 40px;
+    box-shadow: 0px 5px 10px #888;
+    position: relative;
+  }
+
+  &__work-type, &__period {
+    color: #a9a9a9;
+    font-family: 'Nanum Gothic', 'sans-serif';
+    font-size: 12px;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+  }
+
+  &__company-name {
+    font-size: 18px;
+  }
+
+  &__seperate {
+    width: 40px;
+    height: 3px;
+    background-color: #000;
+    margin: 10px 0;
+  }
+
+  &__period {
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  &__details {
+    font-family: 'Nanum Gothic', 'sans-serif';
+    font-size: 14px;
+    font-weight: 800;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 7px 72px;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transition: all .3s;
+  }
+
+  &__item:first-child &__details {
+    color: #3135b0;
+    border: 1px solid #3135b0;
+  }
+
+  &__item:nth-child(2) &__details {
+    color: #601E81;
+    border: 1px solid #601E81;
+  }
+
+  &__item:nth-child(3) &__details {
+    color: #BFC3F3;
+    border: 1px solid #BFC3F3;
+  }
+
+  &__item:first-child:hover &__details {
+    color: #fff;
+    background-color: #3135b0;
+  }
+
+  &__item:nth-child(2):hover &__details {
+    color: #fff;
+    background-color: #601E81;
+  }
+
+  &__item:nth-child(3):hover &__details {
+    color: #fff;
+    background-color: #BFC3F3;
+  }
+
+  &__indicator {
+    display: block;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+  }
+
+  &__indicator-item {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border: 2px solid #eee;
+    border-radius: 100%;
+    margin: 0 8px;
+    float: left;
+  }
+
+  &__indicator-item.active {
+    border: 2px solid #000;
+  }
+
+  @include laptop {
+    &__indicator {
+      display: none;
+    }
+  }
+}
