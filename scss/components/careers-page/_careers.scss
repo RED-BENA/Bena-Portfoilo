@@ -26,7 +26,7 @@
 
   &__list {
     width: 100%;
-    height: 425px;
+    height: calc(100vh - 160px);
     margin-left: 0px;
     transform: translateY(-50%);
     position: absolute;
@@ -37,7 +37,7 @@
   }
 
   &__item {
-    width: 280px;
+    width: calc(100vw - 40px);
     height: 100%;
     margin-right: 25px;
     float: left;
@@ -47,9 +47,13 @@
     margin-right: 0;
   }
 
-  &__item dt {
+  &__item:nth-child(4) {
+    display: none;
+  }
+
+  &__top {
     width: 100%;
-    height: 185px;
+    height: 45%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     position: relative;
@@ -67,15 +71,18 @@
     background-color: #BFC3F3;
   }
 
+  &__item:nth-child(4) dt {
+    background-color: #e7e8ec;
+  }
+
   &__flower-icon {
     display: block;
     width: 150px;
     height: 150px;
-    background-image: url(../images/career-icon1.png);
     background-size: cover;
     transform: translateX(-50%);
     position: absolute;
-    top: 65px;
+    top: 30%;
     left: 50%;
     z-index: 1;
     transition: transform .3s;
@@ -93,13 +100,15 @@
     background-image: url(../images/career-icon3.png);
   }
 
-  &__item:hover &__flower-icon {
-    transform: translateX(-50%) translateY(-10px);
+  &__item:nth-child(4) &__flower-icon {
+    width: 254px;
+    height: 150px;
+    background-image: url(../images/career-icon4.png);
+    background-size: cover;
   }
 
-  &__item dd {
-    width: 100%;
-    height: 240px;
+  &__bottom {
+    height: 55%;
     background-color: #fff;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -132,13 +141,17 @@
     font-weight: 700;
   }
 
+  // detail 버튼
+
   &__details {
+    display: block;
+    width: calc(100% - 80px);
     font-family: 'Nanum Gothic', 'sans-serif';
     font-size: 14px;
     font-weight: 800;
     background-color: #fff;
     border-radius: 20px;
-    padding: 7px 72px;
+    padding: 7px 0;
     transform: translateX(-50%);
     position: absolute;
     bottom: 40px;
@@ -147,8 +160,8 @@
   }
 
   &__item:first-child &__details {
-    color: #3135b0;
-    border: 1px solid #3135b0;
+    color: #5363D4;
+    border: 1px solid #5363D4;
   }
 
   &__item:nth-child(2) &__details {
@@ -161,19 +174,9 @@
     border: 1px solid #BFC3F3;
   }
 
-  &__item:first-child:hover &__details {
-    color: #fff;
-    background-color: #3135b0;
-  }
-
-  &__item:nth-child(2):hover &__details {
-    color: #fff;
-    background-color: #601E81;
-  }
-
-  &__item:nth-child(3):hover &__details {
-    color: #fff;
-    background-color: #BFC3F3;
+  &__item:nth-child(4) &__details {
+    color: #e7e8ec;
+    border: 1px solid #e7e8ec;
   }
 
   &__indicator {
@@ -199,9 +202,122 @@
     border: 2px solid #000;
   }
 
+  @include mobile-m {
+    &__container {
+      width: 1055px;
+    }
+
+    &__item {
+      // width: 335px;
+    }
+
+    &__flower-icon {
+      top: 55%;
+    }
+
+    &__work-type {
+      font-size: 15px;
+    }
+
+    &__company-name {
+      font-size: 22px;
+    }
+
+    &__period {
+      font-size: 16px;
+    }
+
+    &__details {
+      font-size: 18px;
+    }
+  }
+
+  @include mobile-l {
+    &__container {
+      width: 1205px;
+    }
+  }
+
+  @include tablet {
+    &__container {
+      width: 1105px;
+    }
+
+    &__list {
+      height: 570px;
+    }
+
+    &__item {
+      width: calc(50vw - 33px);
+    }
+
+    &__item:nth-child(4) {
+      display: block;
+    }
+  }
+
   @include laptop {
+    &__container {
+      width: 890px;
+    }
+
+    &__list {
+      height: 407px;
+      left: 0;
+    }
+
+    &__item {
+      width: 280px;
+    }
+
+    &__flower-icon {
+      top: 30%;
+    }
+
+    // careers__item에 마우스를 올렸을 때 flower-icon
+
+    &__item:hover &__flower-icon {
+      transform: translateX(-50%) translateY(-10px);
+    }
+
+    // careers__item에 마우스를 올렸을 때 detail 버튼
+
+    &__item:first-child:hover &__details {
+      color: #fff;
+      background-color: #5363D4;
+    }
+
+    &__item:nth-child(2):hover &__details {
+      color: #fff;
+      background-color: #601E81;
+    }
+
+    &__item:nth-child(3):hover &__details {
+      color: #fff;
+      background-color: #BFC3F3;
+    }
+
+    &__item:nth-child(4):hover &__details {
+      color: #fff;
+      background-color: #e7e8ec;
+    }
+
     &__indicator {
       display: none;
+    }
+  }
+
+  @include laptop-l {
+    &__half {
+      height: 52%;
+    }
+
+    &__container {
+      width: 970px;
+    }
+
+    &__item {
+      margin-right: 65px;
     }
   }
 }
