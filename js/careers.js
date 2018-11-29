@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+  // $('.js-careers__container').click(function(event) {
+  //   $('.js-careers--details').removeClass('active');
+  //   $('.js-careers--details-list').removeClass('active');
+  // });
+
   // 왼쪽/오른쪽 swipe 이벤트
 
   $('.js-careers').swipeleft(function(){ // 오른쪽에서 왼쪽으로 swipe(오른쪽으로 이동)
@@ -56,7 +61,7 @@ $(document).ready(function(){
     }
   });
 
-  // DETAILS 클릭 이벤트
+  // careers__item 클릭 이벤트
 
   $('.js-careers__item').click(function() {
 
@@ -66,7 +71,7 @@ $(document).ready(function(){
 
     // 모든 careers__details-list를 포함하는 careers--details의 active 클래스를 on/off 한다.
 
-    $('.js-careers--details').toggleClass('active');
+    $('.js-careers--details').addClass('active');
 
     // 모든 details 창의 active 클래스를 제거한 후, 클릭한 DETAILS 버튼이 위치한 careers--details-list에 active 클래스를 추가한다.
 
