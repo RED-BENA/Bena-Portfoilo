@@ -55,4 +55,28 @@ $(document).ready(function(){
 
     }
   });
+
+  // DETAILS 클릭 이벤트
+
+  $('.js-careers__item').click(function() {
+
+    // 클릭한 DETAILS 버튼이 위치한 careers__item
+
+    var index = $(this).index()+1;
+
+    // 모든 careers__details-list를 포함하는 careers--details의 active 클래스를 on/off 한다.
+
+    $('.js-careers--details').toggleClass('active');
+
+    // 모든 details 창의 active 클래스를 제거한 후, 클릭한 DETAILS 버튼이 위치한 careers--details-list에 active 클래스를 추가한다.
+
+    $('.js-careers--details-list').removeClass('active');
+    $('.js-careers--details-list:nth-of-type('+index+')').addClass('active');
+  });
+
+  // DETAILS 창에서 뒤로가기 클릭 이벤트
+
+  $('.js-careers--details__go-back').click(function() {
+    $('.js-careers--details').toggleClass('active');
+  });
 });

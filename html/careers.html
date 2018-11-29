@@ -96,7 +96,7 @@
                       <div class="careers__seperate"></div>
                       <p class="careers__period">2016.12.19 - 2017.09.30</p>
 
-                      <button class="careers__details" type="button">DETAILS</button>
+                      <button class="careers__details js-careers__details" type="button">DETAILS</button>
                     </dd>
                   </dl>
 
@@ -111,7 +111,7 @@
                       <div class="careers__seperate"></div>
                       <p class="careers__period">2017.11.15 - 2018.02.09</p>
 
-                      <button class="careers__details" type="button">DETAILS</button>
+                      <button class="careers__details js-careers__details" type="button">DETAILS</button>
                     </dd>
                   </dl>
 
@@ -126,7 +126,7 @@
                       <div class="careers__seperate"></div>
                       <p class="careers__period">2018.04.30 - 2018.11.30</p>
 
-                      <button class="careers__details" type="button">DETAILS</button>
+                      <button class="careers__details js-careers__details" type="button">DETAILS</button>
                     </dd>
                   </dl>
 
@@ -144,6 +144,7 @@
                       <button class="careers__details" type="button">DETAILS</button>
                     </dd>
                   </dl> -->
+
                 </div>
               </div>
 
@@ -167,35 +168,133 @@
 
               <div class="careers__half"></div>
             </div>
-
-            <!-- DETAILS 버튼을 눌렀을 때 나타나는 page__details -->
-
-            <div class="careers--details">
-              <dl class="careers--details-list">
-                <dt class="careers--details__top">
-                  <span class="careers--details__thumbnail"></span>
-                </dt>
-
-                <dd class="careers--details__bottom">
-                  <p class="careers--details__work-type">Web Publisher</p>
-                  <h3 class="careers--details__company-name">삼정데이타서비스</h3>
-                  <div class="careers--details__seperate"></div>
-                  <p class="careers--details__period">2016.12.19 - 2017.09.30</p>
-
-                  <h4 class="careers--details__works-title">Works</h4>
-
-                  <ul class="careers--details__works-list">
-                    <li class="careers--details__works-item">
-                      <a href="#" class="careers--details__works-link">다이렉트센드 팝업창</a>
-                    </li>
-                  </ul>
-                </dd>
-              </dl>
-            </div>
           </div>
+
+          <!-- 스크롤(PC)/스와이프(모바일) 아이콘 -->
 
           <span class="page__scroll-icon"></span>
         </div>
+      </div>
+
+      <!-- DETAILS 버튼을 눌렀을 때 나타나는 careers__details -->
+
+      <div class="careers--details js-careers--details">
+
+        <!-- detail windows -->
+
+        <dl class="careers--details-list js-careers--details-list">
+          <dt class="careers--details__top">
+            <!-- 뒤로가기 -->
+
+            <span class="careers--details__go-back js-careers--details__go-back"></span>
+
+            <span class="careers--details__thumbnail"></span>
+          </dt>
+
+          <dd class="careers--details__bottom">
+            <p class="careers--details__work-type">Web Publisher</p>
+            <h3 class="careers--details__company-name">삼정데이타서비스</h3>
+            <div class="careers--details__seperate"></div>
+            <p class="careers--details__period">2016.12.19 - 2017.09.30</p>
+
+            <h4 class="careers--details__title">Works</h4>
+
+            <ul class="careers--details__list">
+              <li class="careers--details__work-item">
+                <a href="#" class="careers--details__work-link">- 다이렉트센드 팝업창</a>
+              </li>
+            </ul>
+
+            <h4 class="careers--details__title">Description</h4>
+
+            <div class="careers--details__content">
+              대량발송 서비스를 제공하는 다이렉트센드(https://directsend.co.kr/) 팝업 해제 방법 안내창.
+            </div>
+
+            <div class="careers--details__links">
+              <a href="#" class="careers--details__website">WEBSITE</a>
+              <a href="#" class="careers--details__github">GITHUB</a>
+            </div>
+          </dd>
+        </dl>
+
+        <dl class="careers--details-list js-careers--details-list">
+          <dt class="careers--details__top">
+            <!-- 뒤로가기 -->
+
+            <span class="careers--details__go-back js-careers--details__go-back"></span>
+
+            <span class="careers--details__thumbnail"></span>
+          </dt>
+
+          <dd class="careers--details__bottom">
+            <p class="careers--details__work-type">Web Publisher</p>
+            <h3 class="careers--details__company-name">삼정데이타서비스</h3>
+            <div class="careers--details__seperate"></div>
+            <p class="careers--details__period">2016.12.19 - 2017.09.30</p>
+
+            <h4 class="careers--details__title">Works</h4>
+
+            <ul class="careers--details__list">
+              <li class="careers--details__work-item">
+                <a href="#" class="careers--details__work-link">- 다이렉트센드 팝업창</a>
+              </li>
+            </ul>
+
+            <h4 class="careers--details__title">Description</h4>
+
+            <div class="careers--details__content">
+              대량발송 서비스를 제공하는 다이렉트센드(https://directsend.co.kr/) 팝업 해제 방법 안내창.
+            </div>
+
+            <div class="careers--details__links">
+              <a href="#" class="careers--details__website">WEBSITE</a>
+              <a href="#" class="careers--details__github">GITHUB</a>
+            </div>
+          </dd>
+        </dl>
+
+        <dl class="careers--details-list js-careers--details-list">
+          <dt class="careers--details__top">
+            <!-- 뒤로가기 -->
+
+            <span class="careers--details__go-back js-careers--details__go-back"></span>
+
+            <span class="careers--details__thumbnail"></span>
+          </dt>
+
+          <dd class="careers--details__bottom">
+            <p class="careers--details__work-type">Web Publisher</p>
+            <h3 class="careers--details__company-name">삼정데이타서비스</h3>
+            <div class="careers--details__seperate"></div>
+            <p class="careers--details__period">2016.12.19 - 2017.09.30</p>
+
+            <h4 class="careers--details__title">Works</h4>
+
+            <ul class="careers--details__list">
+              <li class="careers--details__work-item">
+                <a href="#" class="careers--details__work-link">- 다이렉트센드 팝업창</a>
+              </li>
+            </ul>
+
+            <h4 class="careers--details__title">Description</h4>
+
+            <div class="careers--details__content">
+              대량발송 서비스를 제공하는 다이렉트센드(https://directsend.co.kr/) 팝업 해제 방법 안내창.
+            </div>
+
+            <div class="careers--details__links">
+              <a href="#" class="careers--details__website">WEBSITE</a>
+              <a href="#" class="careers--details__github">GITHUB</a>
+            </div>
+          </dd>
+        </dl>
+      </div>
+
+      <!-- careers-details 창이 나타나기 전 애니메이션 -->
+
+      <div class="careers--details-before">
+
       </div>
 
       <ul class="page__container--fake">

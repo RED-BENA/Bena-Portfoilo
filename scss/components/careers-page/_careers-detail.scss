@@ -1,29 +1,64 @@
 .careers--details {
-  & {
-    // display: none;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(15px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity .3s, transform .5s;
+
+  &.active {
+    transform: translateY(0px);
     z-index: 9999;
+    opacity: 1;
+  }
+
+  &__go-back {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/go-back.png);
+    background-size: cover;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 996;
   }
 
   &-list {
+    display: none;
     width: 100%;
     height: 100%;
+    @include clearfix;
+  }
+
+  &-list.active {
+    display: block;
   }
 
   &__top {
     height: 45%;
-    background-color: #5363D4;
     position: relative;
+  }
+
+  &-list:first-child &__top {
+    background-color: #5363D4;
+  }
+
+  &-list:nth-child(2) &__top {
+    background-color: #601E81;
+  }
+
+  &-list:nth-child(3) &__top {
+    background-color: #BFC3F3;
   }
 
   &__thumbnail {
     display: block;
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
     background-size: cover;
     transform: translate(-50%, -50%);
     position: absolute;
@@ -33,46 +68,231 @@
     transition: transform .3s;
   }
 
-  &-list &__thumbnail:first-child {
+  &-list:first-child &__thumbnail{
     background-image: url(../images/career-icon1.png);
   }
 
-  &-list &__thumbnail:nth-child(2) {
+  &-list:nth-child(2) &__thumbnail {
     background-image: url(../images/career-icon2.png);
   }
 
-  &-list &__thumbnail:nth-child(3) {
+  &-list:nth-child(3) &__thumbnail {
     background-image: url(../images/career-icon3.png);
   }
 
   &__bottom {
+    font-family: 'Nanum Gothic', 'sans-serif';
     height: 55%;
     background-color: #fff;
-    padding: 30px;
+    padding: 25px 35px;
   }
 
   &__work-type, &__period {
     color: #a9a9a9;
-    font-family: 'Nanum Gothic', 'sans-serif';
-    font-size: 14px;
-    letter-spacing: -1px;
-    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 5px;
   }
 
   &__company-name {
-    font-size: 25px;
+    font-family: 'Nanum Myeongjo', 'serif';
+    font-size: 20px;
+    font-weight: 800;
   }
 
   &__seperate {
     width: 40px;
     height: 3px;
     background-color: #000;
-    margin: 10px 0;
+    margin: 7px 0;
   }
 
   &__period {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+  }
+
+  &__title {
+    color: #a9a9a9;
+    font-size: 12px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+
+  &__list {
+    margin-bottom: 10px;
+  }
+
+  &__work-link {
+    font-size: 13px;
+  }
+
+  &__content {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  &__links {
+    width: calc(100% - 70px);
+    position: absolute;
+    bottom: 25px;
+    left: 35px;
+    @include clearfix;
+  }
+
+  &__links > a {
+    display: block;
+    width: calc(50% - 5px);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-right: 10px;
+    padding: 8px 0;
+    float: left;
+  }
+
+  &__website {
+
+  }
+
+  &-list:first-child &__website {
+    background-color: #5363D4;
+    border: 1px solid #5363D4;
+  }
+
+  &-list:nth-child(2) &__website {
+    background-color: #601E81;
+    border: 1px solid #601E81;
+  }
+
+  &-list:nth-child(3) &__website {
+    background-color: #BFC3F3;
+    border: 1px solid #BFC3F3;
+  }
+
+  &__github {
+    margin-right: 0 !important;
+  }
+
+  &-list:first-child &__github {
+    color: #5363D4;
+    border: 1px solid #5363D4;
+  }
+
+  &-list:nth-child(2) &__github {
+    color: #601E81;
+    border: 1px solid #601E81;
+  }
+
+  &-list:nth-child(3) &__github {
+    color: #BFC3F3;
+    border: 1px solid #BFC3F3;
+  }
+
+  @include mobile-m {
+    &__work-type, &__period {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    &__company-name {
+      font-size: 25px;
+    }
+
+    &__seperate {
+      width: 60px;
+      height: 5px;
+      margin: 10px 0;
+    }
+
+    &__period {
+      font-size: 15px;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    &__title {
+      color: #a9a9a9;
+      font-size: 12px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    &__list {
+      margin-bottom: 15px;
+    }
+
+    &__content {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    &__work-link {
+      font-size: 14px;
+    }
+
+    &__links > a {
+      font-size: 16px;
+    }
+
+    &__website {
+      font-size: 18px;
+    }
+  }
+
+  @include mobile-l {
+    &__thumbnail {
+      width: 230px;
+      height: 230px;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+    }
+  }
+
+  @include tablet {
+    &-list {
+      width: calc(100% - 40px);
+      height: 65%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      box-shadow: 0 0 60px #000;
+    }
+
+    &__top {
+      width: 60%;
+      height: 100%;
+      float: left;
+    }
+
+    &__thumbnail {
+      width: 300px;
+      height: 300px;
+    }
+
+    &__bottom {
+      width: 40%;
+      height: 100%;
+      float: left;
+    }
+
+    &__links {
+      width: 100%;
+      position: static;
+    }
+
+    &__links > a {
+      width: 100%;
+      margin-bottom: 10px;
+      float: none;
+    }
   }
 }
