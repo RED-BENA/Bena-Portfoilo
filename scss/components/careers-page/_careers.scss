@@ -41,6 +41,7 @@
     height: 100%;
     margin-right: 25px;
     float: left;
+    cursor: pointer;
   }
 
   &__item:last-child {
@@ -120,9 +121,12 @@
   &__work-type, &__period {
     color: #a9a9a9;
     font-family: 'Nanum Gothic', 'sans-serif';
-    font-size: 12px;
     letter-spacing: -1px;
     margin-bottom: 5px;
+  }
+
+  &__work-type {
+    font-size: 12px;
   }
 
   &__company-name {
@@ -138,7 +142,6 @@
 
   &__period {
     font-size: 13px;
-    font-weight: 700;
   }
 
   // detail 버튼

@@ -1,10 +1,5 @@
 $(document).ready(function(){
 
-  // $('.js-careers__container').click(function(event) {
-  //   $('.js-careers--details').removeClass('active');
-  //   $('.js-careers--details-list').removeClass('active');
-  // });
-
   // 왼쪽/오른쪽 swipe 이벤트
 
   $('.js-careers').swipeleft(function(){ // 오른쪽에서 왼쪽으로 swipe(오른쪽으로 이동)
@@ -76,12 +71,26 @@ $(document).ready(function(){
     // 모든 details 창의 active 클래스를 제거한 후, 클릭한 DETAILS 버튼이 위치한 careers--details-list에 active 클래스를 추가한다.
 
     $('.js-careers--details-list').removeClass('active');
-    $('.js-careers--details-list:nth-of-type('+index+')').addClass('active');
+    $('.js-careers--details-list:nth-child('+index+')').addClass('active');
+
+    // 주변을 어둡게 해주는 careers--black에 active 클래스를 추가한다.
+
+    $('.js-careers--black').addClass('active');
+
+    $('.js-careers--details__top').addClass('active');
+    $('.js-careers--details__bottom').addClass('active');
   });
 
-  // DETAILS 창에서 뒤로가기 클릭 이벤트
+  // 1. DETAILS 창에서 뒤로가기 버튼을 클릭했을 때
+  // 2. careers--details 창 이외의 부분을 터치했을 때
+  // 창이 비활성화 되는 이벤트
 
-  $('.js-careers--details__go-back').click(function() {
-    $('.js-careers--details').toggleClass('active');
+  $('.js-careers--details__go-back, .js-careers--black').click(function(event) {
+    $('.js-careers--details').removeClass('active');
+    // $('.js-careers--details-list').removeClass('active');
+    $('.js-careers--black').removeClass('active');
+
+    $('.js-careers--details__top').removeClass('active');
+    $('.js-careers--details__bottom').removeClass('active');
   });
 });

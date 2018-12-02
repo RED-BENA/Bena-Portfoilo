@@ -7,6 +7,7 @@
   left: 0;
   z-index: 0;
   opacity: 0;
+  overflow: hidden;
   transition: opacity .3s, z-index .3s, transform .5s;
 
   &.active {
@@ -19,6 +20,7 @@
     display: none;
     width: 100%;
     height: 100%;
+    background-color: #fff;
     @include clearfix;
   }
 
@@ -122,6 +124,10 @@
     letter-spacing: 1px;
   }
 
+  &__title--preview {
+    display: none;
+  }
+
   &__list {
     margin-bottom: 10px;
   }
@@ -133,6 +139,26 @@
   &__content {
     font-size: 13px;
     margin-bottom: 10px;
+  }
+
+  &__content--preview {
+    display: none;
+  }
+
+  &__content--preview > img {
+    max-width: 100%;
+    border: 1px solid #a9a9a9;
+    margin-bottom: 5px;
+  }
+
+  &__zoom {
+    display: none;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #fff;
+    border: 1px solid #a9a9a9;
+    padding: 5px;
   }
 
   &__links {
@@ -294,7 +320,7 @@
     }
 
     &__content {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     &__links {
@@ -307,5 +333,118 @@
       margin-bottom: 10px;
       float: none;
     }
+  }
+
+  @include laptop {
+    width: calc(100% - 120px);
+    height: calc(100% - 120px);
+    background-color: #fff;
+    transform: translate(-150%, -50%);
+    opacity: 1;
+    transition: transform .4s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    &.active {
+      transform: translate(-50%, -50%);
+    }
+
+    // detail의 이미지 부분
+
+    &__top {
+      width: 70%;
+      transform: translateX(-150%);
+      transition: transform .4s ease .1s;
+    }
+
+    &__top.active {
+      transform: translateX(0px);
+    }
+
+    // 뒤로 가기
+
+    &__go-back {
+      width: 35px;
+      height: 35px;
+      top: 40px;
+      left: 50px;
+    }
+
+    &__thumbnail {
+      width: 400px;
+      height: 400px;
+    }
+
+    // 설명 부분
+
+    &__bottom {
+      width: 30%;
+      transform: translateX(-150%);
+      opacity: 0;
+      transition: transform .4s ease .1s, opacity .3s ease .1s;
+    }
+
+    &__bottom.active {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+
+    &__title--preview {
+      display: block;
+    }
+
+    &__content {
+      margin-bottom: 20px;
+    }
+
+    &__content--preview {
+      display: block;
+    }
+
+    &__links {
+      width: 100%;
+      position: static;
+    }
+
+    &__links > a {
+      width: 100%;
+      margin-bottom: 10px;
+      float: none;
+    }
+  }
+
+  @include laptop-l {
+    width: calc(100% - 360px);
+    height: calc(100% - 120px);
+
+    // 뒤로 가기
+
+    &__go-back {
+      width: 40px;
+      height: 40px;
+    }
+
+    &__thumbnail {
+      width: 500px;
+      height: 500px;
+    }
+  }
+}
+
+// careers--details가 활성화되었을 때 주변을 어둡게 만들어주는 careers--black
+
+.careers--black {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+
+  &.active {
+    display: block;
   }
 }
