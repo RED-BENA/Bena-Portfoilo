@@ -4,6 +4,10 @@ $(document).ready(function(){
 
   $('.js-careers').swipeleft(function(){ // 오른쪽에서 왼쪽으로 swipe(오른쪽으로 이동)
 
+    if($(window).width() >= 1024) { // 디바이스의 너비가 1024 이상(laptop)일 때
+      return; // swipe 이벤트를 실행하지 않는다.
+    }
+
     var career_pos = parseInt($('.js-careers__list').css("margin-left")); // careers__list의 위치(margin-left)
     var margin = parseInt($('.js-careers__item').css("margin-right")); // careers__item의 margin-right
     var width = $('.js-careers__item').width(); // careers__item의 width
@@ -30,6 +34,10 @@ $(document).ready(function(){
   });
 
   $('.js-careers').swiperight(function() { // 왼쪽에서 오른쪽으로 swipe(왼쪽으로 이동)
+
+    if($(window).width() >= 1024) { // 디바이스의 너비가 1024 이상(laptop)일 때
+      return; // swipe 이벤트를 실행하지 않는다.
+    }
 
     var career_pos = parseInt($('.js-careers__list').css("margin-left")); // careers__list의 위치(margin-left)
     var margin = parseInt($('.js-careers__item').css("margin-right")); // careers__item의 margin-right
@@ -87,7 +95,6 @@ $(document).ready(function(){
 
   $('.js-careers--details__go-back, .js-careers--black').click(function(event) {
     $('.js-careers--details').removeClass('active');
-    // $('.js-careers--details-list').removeClass('active');
     $('.js-careers--black').removeClass('active');
 
     $('.js-careers--details__top').removeClass('active');
