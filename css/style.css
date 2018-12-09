@@ -901,3 +901,30 @@ img {
   z-index: 9998; }
   .careers--black.active {
     display: block; }
+
+.works {
+  width: 100%;
+  height: 100%;
+  background-color: #a6a9dd;
+  padding: 80px 20px 0px; }
+  .works__title {
+    text-align: center;
+    font-weight: 800; }
+  .works__under-bar {
+    width: 50px;
+    height: 5px;
+    background-color: #000;
+    margin: 15px auto; }
+  .works__list:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .works__item {
+    margin-right: 10px;
+    float: left; }
+  .works__item:last-child {
+    margin-right: 0px; }
+  .works__thumbnail {
+    display: block;
+    width: 100px;
+    height: 100px; }

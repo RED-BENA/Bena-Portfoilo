@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="../js/swipe.js"></script>
+  <script src="../js/jquery.mousewheel.min.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/careers.js"></script>
+  <title>WORKS</title>
+</head>
+
+<body>
+
+  <!-- 헤더와 모든 페이지를 포함하는 컨테이너 -->
+
+  <div class="base">
+
+    <!-- 헤더 -->
+
+    <div class="header">
+
+      <!-- 메뉴 열기/닫기 버튼 -->
+
+      <div class="menu-toggle js-menu-toggle">
+        <div class="menu-toggle__bar1"></div>
+        <div class="menu-toggle__bar2"></div>
+        <div class="menu-toggle__bar3"></div>
+      </div>
+
+      <!-- 네비게이션 바 -->
+
+      <div class="nav js-nav">
+        <ul class="nav__list">
+          <li class="nav__item js-nav__item">
+            <a href="#" data-enhance="false">MAIN</a>
+          </li>
+
+          <li class="nav__item js-nav__item">
+            <a href="#">CAREERS</a>
+          </li>
+
+          <li class="nav__item js-nav__item">
+            <a href="#">WORKS</a>
+          </li>
+
+          <li class="nav__item js-nav__item">
+            <a href="#">PROFILE</a>
+          </li>
+
+          <li class="nav__item js-nav__item">
+            <a href="#">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- 진짜 페이지(맨앞)와 가짜 페이지(뒤에 두 개) -->
+
+    <div class="all-pages">
+
+      <!-- 진짜 페이지를 보여주는 page__container(overflow-y를 hidden으로 하여 한 섹션만 볼 수 있게 함) -->
+
+      <div class="page__container js-page__container active">
+
+        <!-- 진짜 페이지의 translate를 적용하는 부분(0, -100%, -200%)-->
+
+        <div class="page__container--front js-page__container--front active">
+
+          <!-- 진짜 페이지 -->
+
+          <div class="page__item page__item--front js-page__item--front">
+
+            <!-- 작업 목록 -->
+
+            <div class="works">
+              <div class="wrapper">
+                <h1 class="works__title">Works</h1>
+                <div class="works__under-bar"></div>
+
+                <ul class="works__list">
+                  <li class="works__item">
+                    <span class="works__thumbnail"></span>
+                    <h3 class="works__item-name">포켓몬 쇼핑몰</h3>
+
+                    <p class="works__item-detail">
+                      ?????
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
