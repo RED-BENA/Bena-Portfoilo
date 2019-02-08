@@ -56,3 +56,30 @@ img {
   background-image: url(../images/rose-icon.png);
   background-size: cover;
 }
+
+.carousel__indicator {
+  display: block;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 2;
+
+  @include laptop {
+    &__indicator {
+      display: none;
+    }
+  }
+}
+
+.carousel__indicator-item {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border: 2px solid #888;
+  border-radius: 100%;
+  margin: 0 8px;
+  float: left;
+}
+
+.carousel__indicator-item.active {
+  border: 2px solid #000;
+}

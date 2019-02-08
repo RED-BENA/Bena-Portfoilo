@@ -177,29 +177,6 @@
     border: 1px solid #BFC3F3;
   }
 
-  &__indicator {
-    display: block;
-    transform: translateX(-50%);
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    z-index: 2;
-  }
-
-  &__indicator-item {
-    width: 12px;
-    height: 12px;
-    background-color: #fff;
-    border: 2px solid #eee;
-    border-radius: 100%;
-    margin: 0 8px;
-    float: left;
-  }
-
-  &__indicator-item.active {
-    border: 2px solid #000;
-  }
-
   @include mobile-m {
     &__container {
       width: 1055px;
@@ -300,8 +277,9 @@
       background-color: #e7e8ec;
     }
 
-    &__indicator {
-      display: none;
+    .carousel__indicator {
+      bottom: 20px;
+      left: 50%;
     }
   }
 

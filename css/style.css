@@ -39,6 +39,27 @@ img {
   background-image: url(../images/rose-icon.png);
   background-size: cover; }
 
+.carousel__indicator {
+  display: block;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 2; }
+  @media (min-width: 1024px) {
+    .carousel__indicator__indicator {
+      display: none; } }
+
+.carousel__indicator-item {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border: 2px solid #888;
+  border-radius: 100%;
+  margin: 0 8px;
+  float: left; }
+
+.carousel__indicator-item.active {
+  border: 2px solid #000; }
+
 .base {
   height: 100vh;
   position: relative; }
@@ -530,23 +551,6 @@ img {
   .careers__item:nth-child(3) .careers__details {
     color: #BFC3F3;
     border: 1px solid #BFC3F3; }
-  .careers__indicator {
-    display: block;
-    transform: translateX(-50%);
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    z-index: 2; }
-  .careers__indicator-item {
-    width: 12px;
-    height: 12px;
-    background-color: #fff;
-    border: 2px solid #eee;
-    border-radius: 100%;
-    margin: 0 8px;
-    float: left; }
-  .careers__indicator-item.active {
-    border: 2px solid #000; }
   @media (min-width: 375px) {
     .careers__container {
       width: 1055px; }
@@ -596,8 +600,9 @@ img {
     .careers__item:nth-child(4):hover .careers__details {
       color: #fff;
       background-color: #e7e8ec; }
-    .careers__indicator {
-      display: none; } }
+    .careers .carousel__indicator {
+      bottom: 20px;
+      left: 50%; } }
   @media (min-width: 1440px) {
     .careers__half {
       height: 52%; }
@@ -923,7 +928,8 @@ img {
     overflow: hidden; }
   .works__list {
     width: 1195px;
-    margin-left: 0; }
+    margin-left: 0;
+    transition: margin-left 0.3s linear; }
     .works__list:after {
       content: "";
       display: table;
@@ -937,7 +943,8 @@ img {
     padding: 30px 20px;
     float: left;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    touch-action: none; }
   .works__item:nth-child(1) {
     background-color: #988bee; }
   .works__item:nth-child(2) {
@@ -1007,3 +1014,6 @@ img {
     background-color: #5e45c1; }
   .works__item:nth-child(4) .works__item-detail {
     background-color: #7150ba; }
+  .works .carousel__indicator {
+    bottom: -50px;
+    left: 50%; }

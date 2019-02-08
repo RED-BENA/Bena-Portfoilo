@@ -14,7 +14,7 @@
   <script src="../js/swipe.js"></script>
   <script src="../js/jquery.mousewheel.min.js"></script>
   <script src="../js/common.js"></script>
-  <script src="../js/careers.js"></script>
+  <script src="../js/works.js"></script>
   <title>WORKS</title>
 </head>
 
@@ -82,14 +82,14 @@
 
             <!-- 작업 목록 -->
 
-            <div class="works">
+            <div class="works js-works">
               <div class="wrapper">
                 <h1 class="works__title">Works</h1>
                 <div class="works__under-bar"></div>
 
                 <div class="works__container">
-                  <ul class="works__list">
-                    <li class="works__item">
+                  <ul class="works__list js-works__list">
+                    <li class="works__item js-works__item">
                       <span class="works__symbol"></span>
                       <h3 class="works__item-name">레스토랑<br />예약 시스템</h3>
                       <div class="works__item-under-bar"></div>
@@ -104,7 +104,7 @@
                       <button type="button" class="works__item-detail">DETAIL</button>
                     </li>
 
-                    <li class="works__item">
+                    <li class="works__item js-works__item">
                       <span class="works__symbol"></span>
                       <h3 class="works__item-name">포켓몬 쇼핑몰</h3>
                       <div class="works__item-under-bar"></div>
@@ -119,7 +119,7 @@
                       <button type="button" class="works__item-detail">DETAIL</button>
                     </li>
 
-                    <li class="works__item">
+                    <li class="works__item js-works__item">
                       <span class="works__symbol"></span>
                       <h3 class="works__item-name">하늘연달</h3>
                       <div class="works__item-under-bar"></div>
@@ -134,7 +134,7 @@
                       <button type="button" class="works__item-detail">DETAIL</button>
                     </li>
 
-                    <li class="works__item">
+                    <li class="works__item js-works__item">
                       <span class="works__symbol"></span>
                       <h3 class="works__item-name">카카오뱅크<br />반응형 버전</h3>
                       <div class="works__item-under-bar"></div>
@@ -150,6 +150,26 @@
                     </li>
                   </ul>
                 </div>
+
+                <!-- Indicator(모바일, 탭) -->
+
+                <ul class="carousel__indicator js-carousel__indicator clearfix">
+                  <li class="carousel__indicator-item js-carousel__indicator-item active">
+                    <a href="#"></a>
+                  </li>
+
+                  <li class="carousel__indicator-item js-carousel__indicator-item">
+                    <a href="#"></a>
+                  </li>
+
+                  <li class="carousel__indicator-item js-carousel__indicator-item">
+                    <a href="#"></a>
+                  </li>
+
+                  <li class="carousel__indicator-item js-carousel__indicator-item">
+                    <a href="#"></a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

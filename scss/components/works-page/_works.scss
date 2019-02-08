@@ -29,6 +29,7 @@
   &__list {
     width: 1195px;
     margin-left: 0;
+    transition: margin-left 0.3s linear;
     @include clearfix;
   }
 
@@ -42,6 +43,7 @@
     float: left;
     position: relative;
     overflow: hidden;
+    touch-action: none;
   }
 
   &__item:nth-child(1) {
@@ -149,5 +151,10 @@
 
   &__item:nth-child(4) &__item-detail {
     background-color: #7150ba;
+  }
+
+  .carousel__indicator {
+    bottom: -50px;
+    left: 50%;
   }
 }
