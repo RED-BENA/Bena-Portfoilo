@@ -63,10 +63,8 @@ img {
   position: absolute;
   z-index: 2;
 
-  @include laptop {
-    &__indicator {
-      display: none;
-    }
+  @include laptop-l {
+    display: none;
   }
 }
 

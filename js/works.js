@@ -4,7 +4,7 @@ $(document).ready(function(){
 
   $('.js-works').swipeleft(function(){ // 오른쪽에서 왼쪽으로 swipe(오른쪽으로 이동)
 
-    if($(window).width() >= 1024) { // 디바이스의 너비가 1024 이상(laptop)일 때
+    if($(window).width() >= 1440) { // 디바이스의 너비가 1440 이상(laptop-l)일 때
       return; // swipe 이벤트를 실행하지 않는다.
     }
 
@@ -40,7 +40,7 @@ $(document).ready(function(){
 
   $('.js-works').swiperight(function() { // 왼쪽에서 오른쪽으로 swipe(왼쪽으로 이동)
 
-    if($(window).width() >= 1024) { // 디바이스의 너비가 1024 이상(laptop)일 때
+    if($(window).width() >= 1440) { // 디바이스의 너비가 1440 이상(laptop-l)일 때
       return; // swipe 이벤트를 실행하지 않는다.
     }
 

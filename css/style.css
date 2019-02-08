@@ -44,8 +44,8 @@ img {
   transform: translateX(-50%);
   position: absolute;
   z-index: 2; }
-  @media (min-width: 1024px) {
-    .carousel__indicator__indicator {
+  @media (min-width: 1440px) {
+    .carousel__indicator {
       display: none; } }
 
 .carousel__indicator-item {
@@ -936,7 +936,7 @@ img {
       clear: both; }
   .works__item {
     font-family: 'NanumGothic', sans-serif;
-    width: 280px;
+    width: calc(100vw - 40px);
     height: 305px;
     border-radius: 20px;
     margin-right: 25px;
@@ -1017,3 +1017,18 @@ img {
   .works .carousel__indicator {
     bottom: -50px;
     left: 50%; }
+  @media (min-width: 375px) {
+    .works__list {
+      width: 1440px; } }
+  @media (min-width: 425px) {
+    .works__list {
+      width: 1640px; } }
+  @media (min-width: 768px) {
+    .works__item {
+      width: calc(50vw - 32px); } }
+  @media (min-width: 1024px) {
+    .works__item {
+      width: calc(33.333vw - 30px); } }
+  @media (min-width: 1440px) {
+    .works__item {
+      width: 280px; } }

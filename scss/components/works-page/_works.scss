@@ -35,7 +35,7 @@
 
   &__item {
     font-family: 'NanumGothic', sans-serif;
-    width: 280px;
+    width: calc(100vw - 40px);
     height: 305px;
     border-radius: 20px;
     margin-right: 25px;
@@ -156,5 +156,35 @@
   .carousel__indicator {
     bottom: -50px;
     left: 50%;
+  }
+
+  @include mobile-m {
+    &__list {
+      width: 1440px;
+    }
+  }
+
+  @include mobile-l {
+    &__list {
+      width: 1640px;
+    }
+  }
+
+  @include tablet {
+    &__item {
+      width: calc(50vw - 32px);
+    }
+  }
+
+  @include laptop {
+    &__item {
+      width: calc(33.333vw - 30px);
+    }
+  }
+
+  @include laptop-l {
+    &__item {
+      width: 280px;
+    }
   }
 }
